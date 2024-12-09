@@ -72,7 +72,7 @@ export const typeDefs = gql`
 
     checkEmail(input: checkEmailInput!): RegisterEmailResponse!
     createUser(input: CreateUserInput!): User!
-    updateUser(_id: ID!, name: String!, bio: String!, interests: [String!], profession: String!, schoolWork: [String!]): User!
+    updateUser(email: String!, name: String!, bio: String!, interests: [String!], profession: String!, schoolWork: [String!]): User!
     updateAttraction(email: String!, attraction: String!): User!
 
   }

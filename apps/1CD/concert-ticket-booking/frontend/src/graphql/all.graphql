@@ -23,3 +23,8 @@ mutation Login($input: LoginInput!) {
     token
   }
 }
+mutation VerifyUserEmail($email: String!) {
+  verifyUserEmail(email: $email) {
+    email
+  }
+}

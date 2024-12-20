@@ -107,10 +107,12 @@ query GetBooking($id: ID) {
         phoneNumber
         images
         hotelAmenities
+        location
       }
       roomName
       roomType
       price
+      amenities
       roomInformation
       createdAt
     }

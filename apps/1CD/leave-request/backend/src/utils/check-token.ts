@@ -1,16 +1,9 @@
-// this is check-token.ts
-
-import { cookies } from 'next/headers';
 import jwt from 'jsonwebtoken';
+import { Context } from 'src/types';
 
 interface JwtPayload {
   role: string;
 }
-
-const getTokenFromCookies = (): string | null => {
-  const cookieStore = cookies();
-  return cookieStore.get('authtoken')?.value || null;
-};
 
 const verifyToken = (token: string): JwtPayload | null => {
   try {
@@ -25,10 +18,8 @@ const verifyToken = (token: string): JwtPayload | null => {
   }
 };
 
-export const checkToken = (roles: string[]) => {
-  console.log("obj")
-
-  const token = getTokenFromCookies();
+export const checkToken = (roles: string[], context: Context) => {
+  const token = context.req.headers.get('authorization');
 
   if (!token) return false;
 

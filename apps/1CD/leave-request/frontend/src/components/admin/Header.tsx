@@ -23,7 +23,7 @@ const superviseeHeader = [
 
 const getCorrectNavBar = async () => {
   const decoded = await WhoAmI();
-  const { role } = decoded as { role: string };
+  const { role } = decoded as { role: string } || "";
   return (role == 'supervisee' && superviseeHeader) || (role == 'supervisor' && supervisorHeader) || adminHeader;
 };
 

@@ -4,6 +4,7 @@ import { ApolloWrapper } from '@/components/providers';
 import FooterHome from '@/components/FooterHome';
 import Header from '@/components/Header';
 import HotelDetail from './(client)/hotel-detail/HotelDetail';
+import HotelRoomDetail from '@/components/HotelRoomDetail';
 
 
 export const metadata = {
@@ -17,7 +18,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       <body>
         <ApolloWrapper>
           <Header />
-          <HotelDetail/>
           {children}
           <FooterHome />
         </ApolloWrapper>

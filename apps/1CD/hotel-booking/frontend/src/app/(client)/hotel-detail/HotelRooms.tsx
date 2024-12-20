@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import RoomCard from '@/components/RoomCard';
 const HotelRooms = () => {
     const { data } = useHotelDetailQuery({ variables: { hotelId: '674bfbd6a111c70660b55541' } });
+
     return (
         <div data-cy="Hotel-Rooms" className='flex flex-col gap-4'>
             <div className='text-2xl font-semibold'>Choose your room</div>

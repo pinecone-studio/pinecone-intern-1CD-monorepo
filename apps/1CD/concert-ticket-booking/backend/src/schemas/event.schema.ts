@@ -29,19 +29,19 @@ export const typeDefs = gql`
   type TicketType {
     _id: ID!
     zoneName: String!
-    soldQuantity: String!
-    totalQuantity: String!
-    unitPrice: String!
-    discount: String
+    soldQuantity: Int!
+    totalQuantity: Int!
+    unitPrice: Int!
+    discount: Int
     additional: String
   }
   scalar Date
 
   input TicketTypeInput {
     zoneName: String!
-    totalQuantity: String!
-    unitPrice: String!
-    discount: String
+    totalQuantity: Int!
+    unitPrice: Int!
+    discount: Int
     additional: String
   }
 
@@ -52,7 +52,7 @@ export const typeDefs = gql`
     guestArtists: [ArtistInput]
     ticketType: [TicketTypeInput!]!
     image: String!
-    discount: String
+    discount: Int
     venue: ID!
     category: [ID!]!
     dateRange: DateRangeInput!
@@ -81,7 +81,7 @@ export const typeDefs = gql`
     guestArtists: [ArtistInput]
     products: [ProductInput]
     image: String
-    discount: String
+    discount: Int
     venue: ID
     category: [ID]
   }
